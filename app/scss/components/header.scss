@@ -1,0 +1,18 @@
+@use '.././util/' as *;
+
+.header {
+    @include breakpoint(medium) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: rem(24);
+        
+    }
+
+    &__toggle {
+
+    }
+}
