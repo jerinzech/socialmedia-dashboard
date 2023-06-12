@@ -1,21 +1,74 @@
 @use '../util' as *;
 
+//refer codepen SaraSoueidan
+
 .toggle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     border: none;
+    gap: rem(12);
+
+
+    label {
+       
+        &[for='dark'] {
+            grid-column: 1/2;
+            justify-self: end;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    
+        &[for='system'] {
+            grid-column: 1/4;
+            grid-row: 2/3; 
+            justify-self: center;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    
+        &[for='light'] {
+            grid-column: 3/4;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
 
     &__wrapper {
+        position: relative;
+        grid-column: 2/3;
+        grid-row: 1/2;
         height: rem(24);
+       
         
     }
     
-    input[type='radio']{
+    input[type='radio'] {
+        z-index: 1;
+        position: relative;
+        
+        margin: 0 rem(-2) 0 0;
         opacity: 0;
+        height: rem(24);
+        width: rem(20);
+
+        &:hover {
+            cursor: pointer;
+        }
 
     }
 
+
+
     &__background {
         display: block;
+        position: absolute;
         height: 100%;
+        width: 100%;
+        top: 0;
         border-radius: rem(12);
         overflow: hidden;
         
@@ -28,14 +81,34 @@
 
 
     &__button{
-        width:rem(16);
-        height:rem(16);
+        position: absolute;
+        left: rem(3);
+        top:rem(3);
+        right: 100%;
+        width:rem(18);
+        height:rem(18);
         border-radius: 50%;
-        background-color: var(--toggle);
+        background-color: var(--dark-bg);
+
+
+       
+    }
+    #dark:checked ~ .toggle__button {
+        transition: all 150ms ease-in-out;
+    }
+    #system:checked ~ .toggle__button {
+        left: 50%;
+        right: auto;
+        transform: translate(-50%);
+        transition: all 150ms ease-in-out;
+    }
+    #light:checked ~ .toggle__button {
+        left: calc(100% - 21px);
+        right: 3px;
+        transition: all 150ms ease-in-out;
     }
 
+    
 
-    label {
-
-    }
+    
 }
