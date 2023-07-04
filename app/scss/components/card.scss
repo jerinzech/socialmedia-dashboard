@@ -1,19 +1,37 @@
 @use '../util' as *;
 
+
+.cards {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: rem(30);
+
+    @include breakpoint(medium) {
+        // position: center;
+        flex-direction: row;
+    }
+
+}
+    
+    
+
 .card {
     // display: grid;
    
     background: var(--dark-card);
     color: var(--dark-text1);
-    width: rem(255);
+    // width: rem(255);
     padding: rem(25);
+    flex:1;
 
     text-align: center;
-    border: 1px solid white;
+    // border: 1px solid white;
+    border-radius: rem(5);
 
 
     &--facebook {
-            
+          border-top: rem(5) solid var(--facebook);  
     }
     &--twitter{
 
@@ -92,9 +110,14 @@
 
     }
     &__change {
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: rem(12);
         font-weight: 700;
+
+       
+
         &--up {
             color: var(--limegreen);            
         }
@@ -102,5 +125,9 @@
             color: var(--brightred);
         }
 
+    }
+
+    &__number {
+        margin-left: rem(4);
     }
 }
