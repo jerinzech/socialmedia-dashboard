@@ -57,6 +57,11 @@
        
     }
 
+    &__followers {
+
+        margin-bottom: rem(25);
+    }
+
     &__count {
 
         
@@ -64,7 +69,7 @@
         font-weight: 700;
         letter-spacing: rem(-2);
         line-height: 1;
-        // margin-bottom: rem(9);
+        margin-bottom: rem(4);
 
         &--big {
             font-size: rem(56);
@@ -88,11 +93,13 @@
     }
     &__change {
 
+        font-size: rem(12);
+        font-weight: 700;
         &--up {
-            
+            color: var(--limegreen);            
         }
         &--down {
-
+            color: var(--brightred);
         }
 
     }
