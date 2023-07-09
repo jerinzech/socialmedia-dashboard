@@ -4,8 +4,7 @@
 
 .toggle {
     display: grid;
-    grid-template-columns: 1fr rem(60) 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr rem(48); 
     border: none;
     gap: rem(5) rem(8);
     border: none;
@@ -13,32 +12,7 @@
 
     label {
         font-size: rem(14);
-        align-self: center;
-       
-        &[for='dark'] {
-            grid-column: 1/2;
-            justify-self: end;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    
-        &[for='system'] {
-            grid-column: 1/4;
-            grid-row: 2/3; 
-            justify-self: center;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    
-        &[for='light'] {
-            
-            grid-column: 3/4;
-            &:hover {
-                cursor: pointer;
-            }
-        }
+        grid-column: 1/2;
     }
 
 
