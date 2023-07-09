@@ -24,12 +24,16 @@
     overflow: hidden;
     background: var(--dark-card);
     color: var(--dark-text1);
-    // width: rem(255);
     padding: rem(25);
-    
-
     text-align: center; 
     border-radius: rem(5);
+    transition: background 150ms ease-in-out;
+
+
+    &:hover {
+        background-color: var(--dark-card-hover);
+        cursor: pointer;
+    }
 
 
 
