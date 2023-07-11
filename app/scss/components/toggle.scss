@@ -3,16 +3,22 @@
 //refer codepen SaraSoueidan
 
 .toggle {
-    display: grid;
+    display:  grid;
     grid-template-columns: 1fr rem(48); 
     border: none;
-    gap: rem(5) rem(8);
+    // gap: rem(5) rem(8);
     border: none;
 
 
     label {
         font-size: rem(14);
-        grid-column: 1/2;
+        // grid-column: 1/2;
+
+       &[for='dark'] {
+        line-height: rem(24);
+        margin-right: rem(13);
+       }
+
     }
 
 
