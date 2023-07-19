@@ -3,6 +3,6 @@ for (let i = 0; i < radioButtons.length; i++) {
   radioButtons[i].addEventListener("click", (event) => {
     document.getElementById("dark").checked
       ? (document.querySelector("body").classList = "dark")
-      : (documemt.querySelector("body").classList = "light");
+      : (document.querySelector("body").classList = "light");
   });
 }
