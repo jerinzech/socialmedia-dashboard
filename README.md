@@ -4,5 +4,5 @@
 
 #my output:
 
-![Screenshot](social dashboard dark.png)
-![Screenshot](social dashboard light.png)
+![Screenshot](social-dashboard-dark.png)
+![Screenshot](social-dashboard-light.png)
